@@ -1,4 +1,8 @@
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 
 public class Procesador {
@@ -21,6 +25,16 @@ class MenuProcesador extends JFrame{
 }
 class LaminaProcesador extends JPanel{
 	public LaminaProcesador() {
-		
+		setLayout(new BorderLayout());
+		JPanel laminaMenu=new JPanel();
+		JMenuBar miBarra=new JMenuBar();
+		JMenu fuente=new JMenu("Fuente");
+		JMenu estilo=new JMenu("Estilo");
+		JMenu tamagno=new JMenu("Tamaño");
+		miBarra.add(fuente);
+		miBarra.add(estilo);
+		miBarra.add(tamagno);
+		laminaMenu.add(miBarra);
+		add(laminaMenu, BorderLayout.NORTH);
 	}
 }
